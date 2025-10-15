@@ -1,0 +1,19 @@
+{
+  "name": "athaan-server",
+  "version": "1.0.0",
+  "description": "EiXRaspi backend for prayer time management",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "worker": "node worker.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.16.0",
+    "mongoose": "^7.5.1",
+    "dotenv": "^16.3.1",
+    "node-fetch": "^3.3.2",
+    "mqtt": "^5.2.0"
+  },
+  "type": "commonjs"
+}
