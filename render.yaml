@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: athaan-server
+    env: node
+    plan: free  # Upgrade later if needed
+    branch: main
+    buildCommand: "npm install"
+    startCommand: "node index.js"
+    envVars:
+      - key: MONGODB_URI
+        value: "mongodb+srv://shaheentoefy:GevqhNbFMrypZ3Ru@cluster0.tliyoy3.mongodb.net/athaan?retryWrites=true&w=majority&appName=Cluster0"
+      - key: SERVER_PORT
+        value: "5000"
+      - key: DEMO_MODE
+        value: "false"
