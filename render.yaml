@@ -19,7 +19,6 @@ services:
         value: "30000"
     healthCheckPath: "/health"
     autoDeploy: true
-    pullRequestAutoDeploy: false
 
   - type: worker
     name: athaan-worker
