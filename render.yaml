@@ -5,16 +5,16 @@ services:
     plan: free
     branch: main
     buildCommand: "npm install"
-    startCommand: "node index.js"
+    startCommand: "npm start"
     envVars:
       - key: MONGODB_URI
         value: "mongodb+srv://shaheentoefy:GevqhNbFMrypZ3Ru@cluster0.tliyoy3.mongodb.net/athaan?retryWrites=true&w=majority&appName=Cluster0"
       - key: SERVER_PORT
         value: "5000"
-      - key: DEMO_MODE
-        value: "false"
       - key: WS_PORT
         value: "8080"
+      - key: DEMO_MODE
+        value: "false"
       - key: HEARTBEAT_INTERVAL
         value: "30000"
     healthCheckPath: "/health"
@@ -26,10 +26,10 @@ services:
     plan: free
     branch: main
     buildCommand: "npm install"
-    startCommand: "node worker.js"
+    startCommand: "npm run worker"
     envVars:
       - key: MONGODB_URI
-        value: "mongodb+srv://shaheentoefy:GevqhNbFMrypZ3Ru@cluster0.tliyoy3.mongodb.net/athaan?retryWrites=true&w=majority&appName=Cluster0"
+        value: "mongodb+srv://shaheentoefy:GevqhNbFMrypZ3Ru@cluster0.tliyoy3.mongodb.net/athaan?retryWrites=true&w=majority"
       - key: WS_PORT
         value: "8080"
     autoDeploy: true
