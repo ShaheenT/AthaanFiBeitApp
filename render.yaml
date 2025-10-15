@@ -34,4 +34,3 @@ services:
       - key: WS_PORT
         value: "8080"
     autoDeploy: true
-    healthCheckPath: "/health"
